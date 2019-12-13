@@ -8,6 +8,7 @@ import Personnages from "./Components/Personnages";
 import Planetes from "./Components/Planetes";
 import Vaisseaux from "./Components/Vaisseaux";
 import Favoris from "./Components/Favoris";
+import Accueil from "./Components/Accueil";
 
 
 class App extends Component {
@@ -16,24 +17,22 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Bienvenue sur Star Wars API</h2>
         </div>
 
-
-          <Link to="/">Accueil</Link><br />
-          <br />
-          <Link to="/personnages">Personnages</Link><br />
-          <br />
-          <Link to="/planetes">Planetes</Link><br />
-          <br />
-          <Link to="/vaisseaux">Vaisseaux</Link><br />
-          <br />
-          <Link to="/favoris">Favoris</Link><br />
-          <br />
-
+        <Link to="/accueil">Accueil</Link><br />
+        <br />
+        <Link to="/personnages">Personnages</Link><br />
+        <br />
+        <Link to="/planetes">Planetes</Link><br />
+        <br />
+        <Link to="/vaisseaux">Vaisseaux</Link><br />
+        <br />
+        <Link to="/favoris">Favoris</Link><br />
+        <br />
 
         <div>
           <Switch>
+            <Route path='/accueil' component={Accueil} />
             <Route path='/personnages' component={Personnages} />
             <Route path='/planetes' component={Planetes} />
             <Route path='/vaisseaux' component={Vaisseaux} />
