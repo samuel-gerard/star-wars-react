@@ -4,7 +4,7 @@ const axios = require('axios');
 
 class Planetes extends React.Component {
 
-  state = { begin: "Planetes", planets: [] };
+  state = { title: "Planetes", planets: [] };
 
   componentDidMount() {
     axios.get('https://swapi.co/api/planets/')
@@ -16,7 +16,7 @@ class Planetes extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1>{this.state.begin}</h1>
+        <h1>{this.state.title}</h1>
         <p>
           {this.state.planets.map((planet, i) => (
               <li className="planets-list" key={i}>

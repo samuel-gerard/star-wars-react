@@ -5,7 +5,9 @@ class Accueil extends React.Component {
 
   render() {
     return (
-    <h1>{this.state.begin}</h1>
+      <div>
+        <h1>{this.state.begin}</h1>        
+      </div>
     );
   }
 }

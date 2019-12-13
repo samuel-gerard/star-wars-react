@@ -3,7 +3,7 @@ const axios = require('axios');
 
 class Vaisseaux extends React.Component {
 
-  state = { begin: "Vaisseaux", starships: [] };
+  state = { title: "Vaisseaux", starships: [] };
 
   componentDidMount() {
     axios.get('https://swapi.co/api/starships/')
@@ -15,14 +15,14 @@ class Vaisseaux extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1>{this.state.begin}</h1>
-        <p>
+        <h1>{this.state.title}</h1>
+        <div className="starships">
           {this.state.starships.map((starship, i) => (
               <li className="starships-list" key={i}>
                 <span className="starship-label">{starship.name}</span>
               </li>
           ))}
-        </p>
+        </div>
       </div>
     );
   }
