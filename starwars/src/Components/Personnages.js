@@ -16,7 +16,7 @@ class Personnages extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1>{this.state.title}</h1>
+        <h1 className="category-title">{this.state.title}</h1>
         {this.state.personnages.map((personnage, i) => (
           <div className="card">
               <ul className="list-group list-group-flush" key={i}>
@@ -34,7 +34,7 @@ class Personnages extends React.Component {
                 <li className="list-group-item">Vaisseaux : 
                   <ul>
                     {personnage.starships.map((starship, j) => (
-                      <li className="personnage-starships" key={j}>{starship}</li>
+                      <li className="sous-items" key={j}>{starship}</li>
                     ))}
                   </ul>
                 </li>

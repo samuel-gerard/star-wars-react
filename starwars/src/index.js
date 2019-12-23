@@ -14,7 +14,7 @@ ReactDOM.render(
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
-  
+    <link href="http://fr.allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" />
     <App />
   </BrowserRouter>,
   document.getElementById('root')

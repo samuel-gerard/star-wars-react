@@ -5,9 +5,31 @@ class Accueil extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.state.begin}</h1>        
+      <div className="accueil">
+
+        <div className="accueil-header">
+          <div className="header-title">
+          </div>
+          <div className="header-subtitle">FINDER</div>
+        </div>
+
+        <div className="accueil-content">
+          <h1>Bienvenue sur STAR WARS Finder !</h1>
+          <h2>
+            Vous trouverez ici une liste de TOUS les personnages interprétés dans les 7 premiers films Star Wars, 
+            ainsi que leurs vaisseaux et les planètes qu'ils ont éxplorés.
+          </h2>
+          <h3>
+            Vous pouvez également ajouter n'importe quelle planète, personnage ou vaisseau à la liste des favoris ! 
+            Il vous sera ensuite possible de modifier leurs caractères à votre guise.
+
+            Cette application utilise SWAPI, une API qui liste de nombreux élements présents dans l'univers des films STAR WARS.
+            Ce projet est réalisé dans le cadre de la formation LP - DWEB de l'IUT Haguenau.
+          </h3>
+        </div>
+
       </div>
+
     );
   }
 }
