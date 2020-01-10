@@ -13,10 +13,8 @@ class Personnages extends React.Component {
     })
   }
 
-  addFavorite(data){
-    console.log(data.personnage)
-    axios.post("https://test.corentindesfarges.fr/favorites", data.personnage)
-    // gérer déja ajouté aux favoris
+  addFavorite(personnage){
+    axios.post("https://test.corentindesfarges.fr/favorites", personnage)
   }
 
   render() {
