@@ -12,6 +12,12 @@ class Planetes extends React.Component {
     })
   }
 
+
+  addFavorite(planet){
+    axios.post("https://test.corentindesfarges.fr/favorites", planet)
+    // gérer déja ajouté aux favoris
+  }
+
   render() {
     return (
       <div className="container">
@@ -37,6 +43,7 @@ class Planetes extends React.Component {
                   ))}
                 </ul>
               </li>
+              <button className="btn btn-secondary" onClick={() => this.addFavorite({planet})}>Ajouter aux favoris</button>
             </ul>
           </div>
         ))}

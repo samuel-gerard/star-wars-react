@@ -12,6 +12,11 @@ class Vaisseaux extends React.Component {
     })
   }
 
+  addFavorite(starship){
+    axios.post("https://test.corentindesfarges.fr/favorites", starship)
+    // gérer déja ajouté aux favoris
+  }
+
   render() {
     return (
       <div className="container">
@@ -42,6 +47,7 @@ class Vaisseaux extends React.Component {
                     ))}
                   </ul>
                 </li>
+                <button className="btn btn-secondary" onClick={() => this.addFavorite({starship})}>Ajouter aux favoris</button>
               </ul>
             </div>
           ))}
