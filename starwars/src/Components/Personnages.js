@@ -13,6 +13,15 @@ class Personnages extends React.Component {
     })
   }
 
+  addFavorite(personnage){
+
+    console.log(personnage);
+
+    // return axios.post("https://test.corentindesfarges.fr/favorites", peopleToCreate)
+  
+    
+  }
+
   render() {
     return (
       <div className="container">
@@ -38,7 +47,7 @@ class Personnages extends React.Component {
                     ))}
                   </ul>
                 </li>
-                <a href="#" className="btn btn-primary">Ajouter aux favoris</a>
+                <button className="btn btn-primary" onClick={this.addFavorite({personnage})}>Ajouter aux favoris</button>
               </ul>
           </div>
         ))}

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -24,21 +23,36 @@ class App extends Component {
       <div className="body">
 
       <Navbar className="navbar navbar-dark bg-dark">
-        <Link className="navbar-brand" to="/">Satr Wars API</Link><br />
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link className="nav-link" to="/personnages">Personnages</Link><br />
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/planetes">Planetes</Link><br />
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/vaisseaux">Vaisseaux</Link><br />
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/favoris">Favoris</Link><br />
-          </li>
-        </ul>
+        <Link className="navbar-brand" to="/">
+          <div className="logo-navbar"></div><div className="subtitle-navbar">FINDER</div>
+        </Link>
+        <div className="row text-center d-flex justify-content-center pt-2 navbar-content">
+          <div className="col-md-2 mb-3">
+            <h6 className="text-uppercase font-weight-bold link-navbar">
+              <Link className="nav-link" to="/">Accueil</Link>
+            </h6>
+          </div>
+          <div className="col-md-2 mb-3">
+            <h6 className="text-uppercase font-weight-bold link-navbar">
+              <Link className="nav-link" to="/personnages">Personnages</Link>
+            </h6>
+          </div>
+          <div className="col-md-2 mb-3">
+            <h6 className="text-uppercase font-weight-bold link-navbar">
+              <Link className="nav-link" to="/planetes">Planetes</Link>
+            </h6>
+          </div>
+          <div className="col-md-2 mb-3">
+            <h6 className="text-uppercase font-weight-bold link-navbar">
+              <Link className="nav-link" to="/vaisseaux">Vaisseaux</Link>
+            </h6>
+          </div>
+          <div className="col-md-2 mb-3">
+            <h6 className="text-uppercase font-weight-bold link-navbar">
+              <Link className="nav-link" to="/favoris">Favoris</Link>
+            </h6>
+          </div>
+        </div>
       </Navbar>
 
         <div>
@@ -52,7 +66,7 @@ class App extends Component {
         </div>
 
         <footer id="sticky-footer" className="bg-dark text-white-50">
-          <div className="container text-center">
+          <div className="text-center">
             <div className="row text-center d-flex justify-content-center pt-5 mb-3">
               <div className="col-md-2 mb-3">
                 <h6 className="text-uppercase font-weight-bold link-footer">
