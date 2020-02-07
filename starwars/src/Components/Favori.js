@@ -18,8 +18,8 @@ class Favori extends React.Component {
   handleChange(event)
   {
     // modifie state
-    var field = event.target.dataset.name
-    var type = event.target.dataset.type
+    const field = event.target.dataset.name
+    const type = event.target.dataset.type
 
     const fav = this.state.favori
     fav[type][field] = event.target.value
