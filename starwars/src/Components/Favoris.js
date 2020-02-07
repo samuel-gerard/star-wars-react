@@ -6,7 +6,7 @@ import Favori from "./Favori";
 
 class Favoris extends React.Component {
 
-  state = { title: "Favoris", favoris: [], personnages: [], planets: [], starships: [], currentType: null };
+  state = { title: "Favoris", favoris: [] };
 
   componentDidMount() {
     axios.get('https://test.corentindesfarges.fr/favorites')
@@ -35,7 +35,6 @@ class Favoris extends React.Component {
                 <h2>Planète : {favori.planet.name}</h2>  
               </div>
             </ul>
-            <a className="btn btn-secondary toUpdate" href={`/favori/${favori.id}`}>Details</a>
           </div>
         );
       case 'personnage':
@@ -46,7 +45,6 @@ class Favoris extends React.Component {
                   <h2>Personnage : {favori.personnage.name}</h2>  
                 </div>
               </ul>
-              <a className="btn btn-secondary toUpdate" href={`/favori/${favori.id}`}>Details</a>
             </div>
         );
       case 'starship':
@@ -57,7 +55,6 @@ class Favoris extends React.Component {
                 <h2>Vaisseau : {favori.starship.name}</h2>
               </div>
             </ul>
-            <a className="btn btn-secondary toUpdate" href={`/favori/${favori.id}`}>Details</a>
           </div>
         );
       default:
@@ -81,6 +78,7 @@ class Favoris extends React.Component {
             <ul className="list-group list-group-flush" key={i}>
               {this.renderSwitch(favori)}
               <button className="btn btn-danger" onClick={() => this.handleDelete({favori})}>Supprimer</button>
+              <a className="btn btn-secondary toUpdate" href={`/favori/${favori.id}`}>Details</a>
             </ul>
           </div>
         ))}

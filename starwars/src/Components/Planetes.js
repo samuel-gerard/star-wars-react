@@ -15,7 +15,7 @@ class Planetes extends React.Component {
 
   addFavorite(planet){
     axios.post("https://test.corentindesfarges.fr/favorites", planet)
-    // gérer déja ajouté aux favoris
+    // gérer si déja ajouté aux favoris
   }
 
   render() {
