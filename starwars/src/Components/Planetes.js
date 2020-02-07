@@ -36,13 +36,6 @@ class Planetes extends React.Component {
               <li className="list-group-item">Terrains : {planet.terrain}</li>
               <li className="list-group-item">Surface d'eau (m2) : {planet.surface_water}</li>
               <li className="list-group-item">Population : {planet.population}</li>
-              <li className="list-group-item">Résidents : 
-                <ul>
-                  {planet.residents.map((resident, j) => (
-                    <li className="sous-items" key={j}>{resident}</li>
-                  ))}
-                </ul>
-              </li>
               <button className="btn btn-secondary" onClick={() => this.addFavorite({planet})}>Ajouter aux favoris</button>
             </ul>
           </div>

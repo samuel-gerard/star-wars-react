@@ -34,14 +34,6 @@ class Personnages extends React.Component {
                 <li className="list-group-item">Couleur des yeux : {personnage.eye_color}</li>
                 <li className="list-group-item">Date de naissance : {personnage.birth_year}</li>
                 <li className="list-group-item">Genre : {personnage.gender}</li>
-                <li className="list-group-item">Lieu de naissance : {personnage.homeworld}</li>
-                <li className="list-group-item">Vaisseaux : 
-                  <ul>
-                    {personnage.starships.map((starship, j) => (
-                      <li className="sous-items" key={j}>{starship}</li>
-                    ))}
-                  </ul>
-                </li>
                 <button className="btn btn-secondary" onClick={() => this.addFavorite({personnage})}>Ajouter aux favoris</button>
               </ul>
           </div>

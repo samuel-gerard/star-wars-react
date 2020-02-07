@@ -14,6 +14,8 @@ import Personnages from "./Components/Personnages";
 import Planetes from "./Components/Planetes";
 import Vaisseaux from "./Components/Vaisseaux";
 import Favoris from "./Components/Favoris";
+import Favori from "./Components/Favori";
+import Create from "./Components/Create";
 import Accueil from "./Components/Accueil";
 
 
@@ -61,6 +63,8 @@ class App extends Component {
             <Route path='/planetes' component={Planetes} />
             <Route path='/vaisseaux' component={Vaisseaux} />
             <Route path='/favoris' component={Favoris} />
+            <Route path='/favori/create' component={Create} />
+            <Route path='/favori/:id' component={Favori} />
             <Route path='/' component={Accueil} />
           </Switch>
         </div>

@@ -40,13 +40,6 @@ class Vaisseaux extends React.Component {
                 <li className="list-group-item">Vitesse en hyperdrive : {starship.hyperdrive_rating}</li>
                 <li className="list-group-item">MGLT : {starship.MGLT}</li>
                 <li className="list-group-item">Type de Vaisseau : {starship.starship_class}</li>
-                <li className="list-group-item">Pilotes : 
-                  <ul>
-                    {starship.pilots.map((pilot, j) => (
-                      <li className="sous-items" key={j}>{pilot}</li>
-                    ))}
-                  </ul>
-                </li>
                 <button className="btn btn-secondary" onClick={() => this.addFavorite({starship})}>Ajouter aux favoris</button>
               </ul>
             </div>
