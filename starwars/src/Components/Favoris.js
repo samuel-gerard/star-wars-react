@@ -1,8 +1,7 @@
 import React from "react";
 const axios = require('axios');
 
-import { Link, Redirect } from "react-router-dom";
-import Favori from "./Favori";
+import { Link } from "react-router-dom";
 
 class Favoris extends React.Component {
 
@@ -68,17 +67,17 @@ class Favoris extends React.Component {
       <div className="container">
         <h1 className="category-title">{this.state.title}</h1>
 
-        {/* <Link className="btn btn-danger" to="/favori/create">
+        <Link className="btn btn-success btn-new-fav" to="/favori/create">
             Créer un favori
-        </Link> */}
+        </Link>
 
         {this.state.favoris.map((favori, i) => (
           
-          <div className="card">
+          <div key={i} className="card">
             <ul className="list-group list-group-flush" key={i}>
               {this.renderSwitch(favori)}
-              <button className="btn btn-danger" onClick={() => this.handleDelete({favori})}>Supprimer</button>
               <a className="btn btn-secondary toUpdate" href={`/favori/${favori.id}`}>Details</a>
+              <button className="btn btn-danger" onClick={() => this.handleDelete({favori})}>Supprimer</button>
             </ul>
           </div>
         ))}

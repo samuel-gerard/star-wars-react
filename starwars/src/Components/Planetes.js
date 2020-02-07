@@ -15,7 +15,6 @@ class Planetes extends React.Component {
 
   addFavorite(planet){
     axios.post("https://test.corentindesfarges.fr/favorites", planet)
-    // gérer si déja ajouté aux favoris
   }
 
   render() {
@@ -23,7 +22,7 @@ class Planetes extends React.Component {
       <div className="container">
         <h1 className="category-title">{this.state.title}</h1>
         {this.state.planets.map((planet, i) => (
-          <div className="card">
+          <div key={i} className="card">
             <ul className="list-group list-group-flush" key={i}>
               <div className="card-header">
                 <h2>{planet.name}</h2>  

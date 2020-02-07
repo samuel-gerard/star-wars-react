@@ -1,7 +1,7 @@
 import React from "react";
-const axios = require('axios');
+// const axios = require('axios');
 
-import { Link, Redirect } from "react-router-dom";
+// import { Link, Redirect } from "react-router-dom";
 
 class Create extends React.Component {
 

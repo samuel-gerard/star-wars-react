@@ -14,7 +14,6 @@ class Vaisseaux extends React.Component {
 
   addFavorite(starship){
     axios.post("https://test.corentindesfarges.fr/favorites", starship)
-    // gérer déja ajouté aux favoris
   }
 
   render() {
@@ -23,7 +22,7 @@ class Vaisseaux extends React.Component {
         <h1 className="category-title">{this.state.title}</h1>
           {this.state.starships.map((starship, i) => (
 
-            <div className="card">
+            <div key={i} className="card">
               <ul className="list-group list-group-flush" key={i}>
                 <div className="card-header">
                   <h2>{starship.name}</h2>

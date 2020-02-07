@@ -1,6 +1,9 @@
 import React from "react";
 const axios = require('axios');
 
+import { Link } from "react-router-dom";
+
+
 class Favori extends React.Component {
 
   state = { title: "Favori", favori: this.props.match.params.id };
@@ -22,8 +25,8 @@ class Favori extends React.Component {
     fav[type][field] = event.target.value
     this.setState({favori: fav})
 
-    // POST
-    // axios.post("https://test.corentindesfarges.fr/favorites", this.state.favori)
+    // PUT REQUEST
+    axios.post("https://test.corentindesfarges.fr/favorites/" + this.state.favori.id, this.state.favori)
     
   }
 
@@ -100,7 +103,9 @@ class Favori extends React.Component {
             <div className="card">
               <ul className="list-group list-group-flush">
                 {this.renderSwitch(this.state.favori)}
-                <button className="btn btn-secondary" onClick={() => this.handleUpdate(this.state.favori)}>Retour aux favoris</button>
+                <Link className="btn btn-secondary" to="/favoris">
+                  Retour aux favoris
+                </Link>
               </ul>
             </div>
       </div>

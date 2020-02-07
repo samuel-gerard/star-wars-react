@@ -22,7 +22,7 @@ class Personnages extends React.Component {
       <div className="container">
         <h1 className="category-title">{this.state.title}</h1>
         {this.state.personnages.map((personnage, i) => (
-          <div className="card">
+          <div key={i} className="card">
               <ul className="list-group list-group-flush" key={i}>
                 <div className="card-header">
                   <h2>{personnage.name}</h2>  
