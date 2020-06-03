@@ -1,22 +1,22 @@
-# Projet REACT | LP DWEB
+# Star Wars React Project | LP DWEB
 
-### Auteur :
+### Contribution :
 Samuel Gerard | IUT Haguenau
 
-### Sujet :
-Projet permettant de lister les personnages, planètes et vaisseaux présents dans les 7 premiers films Star Wars.
-Développé avec React JS.
+### Subject :
+Web application to list  characters, planets and starships present in the first seven Star Wars movies.  
+This school project is developed with ReactJS and use Axios.  
 
-### Utilisation de SWAPI :
+### App based on SWAPI :
 https://swapi.co/
 
 ## Installation
 
-1. Cloner le repository :  
+1.  :octocat: Clone the repository :  
 ``` git clone https://github.com/samuel-gerard/projet-react.git ```
 
-2. Installation des dépendances :  
+2. :open_file_folder: Install dependencies :  
 ``` npm install ```
 
-3. Lancer le projet :  
+3. :rocket: Run the project :  
 ``` npm start ```
