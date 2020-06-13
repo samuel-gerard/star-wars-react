@@ -8,7 +8,7 @@ Web application to list  characters, planets and starships present in the first 
 This school project is developed with ReactJS and use Axios.  
 
 ### App based on SWAPI :
-https://swapi.co/
+https://swapi.dev/
 
 ## Installation
 
